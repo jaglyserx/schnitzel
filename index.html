@@ -1,0 +1,50 @@
+---
+title: Home
+---
+
+<section class="hero">
+    <p class="eyebrow">Compiled restaurant notes</p>
+    <h1>Schnitzel, ranked by the people at the table.</h1>
+    <p class="intro">
+        A simple record of restaurant visits where every reviewer scores the
+        schnitzel, sides, atmosphere, and price.
+    </p>
+</section>
+
+<section id="reviews" class="section">
+    <div class="section-heading">
+        <h2>Restaurant Reviews</h2>
+        <p>Each card summarizes one restaurant and keeps the individual reviewer notes together.</p>
+    </div>
+
+    <div class="review-list">
+        $for(restaurants)$
+            $body$
+        $endfor$
+    </div>
+</section>
+
+<section id="rubric" class="section rubric">
+    <div>
+        <h2>Rubric</h2>
+        <p>Use a 1-5 score for each category so reviews stay comparable.</p>
+    </div>
+    <dl class="rubric-grid">
+        <div>
+            <dt>Schnitzel</dt>
+            <dd>Crust, seasoning, meat quality, texture, and portion.</dd>
+        </div>
+        <div>
+            <dt>Sides</dt>
+            <dd>Potatoes, salad, sauce, garnish, and whether they support the plate.</dd>
+        </div>
+        <div>
+            <dt>Atmosphere</dt>
+            <dd>Room, service rhythm, noise level, and the overall occasion.</dd>
+        </div>
+        <div>
+            <dt>Price</dt>
+            <dd>Value for money, not just the absolute bill size.</dd>
+        </div>
+    </dl>
+</section>
