@@ -17,6 +17,10 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
+    match "favicon/*" $ do
+        route $ gsubRoute "favicon/" (const "")
+        compile copyFileCompiler
+
     match "restaurants/*" $
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/restaurant.html" restaurantCtx
