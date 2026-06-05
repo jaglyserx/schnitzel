@@ -1,9 +1,9 @@
 ---
-title: Ölstugan Hornstull
+title: Soldaten Svejk
 city: Stockholm
-visited: 2026-05-29
-reviewers: Arvid, Elias, Mikael, Joel
-price: 199kr 
+visited: 2026-05-13
+reviewers: Arvid, Elias, Arvik, Joel
+price: 218kr 
 ---
 
 <table>
