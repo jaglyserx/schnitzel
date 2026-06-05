@@ -4,7 +4,6 @@ city: Stockholm
 visited: 2026-06-05
 reviewers: Arvid
 price: EUR 24
-average: 8.75
 ---
 
 <table>

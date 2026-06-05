@@ -4,7 +4,6 @@ city: Stockholm
 visited: 2026-05-29
 reviewers: Arvid, Elias, Mikael, Joel
 price: 199kr 
-average: 8.75
 ---
 
 <table>
