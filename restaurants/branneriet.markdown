@@ -3,7 +3,7 @@ title: Bränneriet
 city: Stockholm
 visited: 2026-09-10
 reviewers: Elias
-price: 169kr
+price: 260kr
 ---
 
 <table>

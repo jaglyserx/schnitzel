@@ -3,7 +3,7 @@ title: Sidepour
 city: Stockholm
 visited: 2026-09-11
 reviewers: Oscar, Elias
-price: 249kr
+price: 295kr
 ---
 
 <table>
