@@ -1,25 +1,20 @@
-FROM haskell:9.10.3-slim-bookworm AS builder
+FROM debian:trixie-slim AS builder
+
+ENV LANG=C.UTF-8
 
 WORKDIR /app
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        g++ \
-        gcc \
-        libc6-dev \
-        libffi-dev \
-        libgmp-dev \
-        make \
-        pkg-config \
-        zlib1g-dev \
+        ghc \
+        libghc-hakyll-dev \
     && rm -rf /var/lib/apt/lists/*
 
-COPY schnitzel.cabal ./
-RUN cabal update \
-    && cabal build site --only-dependencies
+COPY site.hs ./
+RUN ghc -O -threaded -rtsopts -with-rtsopts=-N -package hakyll site.hs -o /usr/local/bin/site
 
 COPY . .
-RUN cabal run site rebuild
+RUN site rebuild
 
 FROM nginxinc/nginx-unprivileged:1.27-alpine
 
