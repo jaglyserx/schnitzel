@@ -1,5 +1,5 @@
 ---
-title: Bränneriet
+title: Häktet
 city: Stockholm
 visited: 2026-09-09
 reviewers: Anton, Elias, Joel 
@@ -44,5 +44,3 @@ price: 249kr
         </tr>
     </tbody>
 </table>
-
-<img class="review-card__image" src="/images/branneriet.jpg" alt="Schnitzel with fries and a beer at Bränneriet" width="1080" height="1920" loading="lazy" decoding="async">
