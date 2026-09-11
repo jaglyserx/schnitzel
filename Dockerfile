@@ -1,4 +1,4 @@
-FROM haskell:9.8.4-slim AS builder
+FROM haskell:9.10.3-slim-bookworm AS builder
 
 WORKDIR /app
 
