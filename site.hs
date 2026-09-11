@@ -1,6 +1,9 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid ((<>))
+import           Data.List (sortOn)
+import           Data.Ord (Down (..))
+import           Data.Time (Day, defaultTimeLocale, parseTimeM)
 import           Numeric (showFFloat)
 import           Text.Read (readMaybe)
 import           Hakyll
@@ -30,6 +33,7 @@ main = hakyll $ do
         route idRoute
         compile $ do
             restaurants <- loadAllSnapshots "restaurants/*" "content"
+                >>= newestVisitsFirst
             let indexCtx =
                     listField "restaurants" restaurantCtx (return restaurants) <>
                     defaultContext
@@ -45,6 +49,20 @@ main = hakyll $ do
 --------------------------------------------------------------------------------
 restaurantCtx :: Context String
 restaurantCtx = averageField <> defaultContext
+
+-- Undated reviews sort after all reviews with a valid visit date.
+newestVisitsFirst :: [Item a] -> Compiler [Item a]
+newestVisitsFirst items = do
+    datedItems <- mapM withVisitDate items
+    return $ map snd $ sortOn (Down . fst) datedItems
+  where
+    withVisitDate item = do
+        visited <- getMetadataField (itemIdentifier item) "visited"
+        let date = visited >>= parseVisitDate
+        return (date, item)
+
+parseVisitDate :: String -> Maybe Day
+parseVisitDate = parseTimeM True defaultTimeLocale "%Y-%m-%d"
 
 averageField :: Context String
 averageField = field "average" $ \item -> do
