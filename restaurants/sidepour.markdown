@@ -1,9 +1,9 @@
 ---
 title: Sidepour
-city: Not specified
-visited: Not specified
+city: Stockholm
+visited: 2026-09-11
 reviewers: Oscar, Elias
-price: Not specified
+price: 249kr
 ---
 
 <table>

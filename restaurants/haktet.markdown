@@ -1,9 +1,9 @@
 ---
 title: Bränneriet
 city: Stockholm
-visited: 2026-09-10
-reviewers: Elias
-price: 169kr
+visited: 2026-09-09
+reviewers: Anton, Elias, Joel 
+price: 249kr
 ---
 
 <table>
@@ -18,11 +18,29 @@ price: 169kr
     </thead>
     <tbody>
         <tr>
+            <td>Anton</td>
+            <td>8</td>
+            <td>3</td>
+            <td>9</td>
+            <td>8</td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
             <td>Elias</td>
+            <td>7</td>
+            <td>4</td>
+            <td>8</td>
+            <td>7</td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>Joel</td>
             <td>8</td>
             <td>6</td>
-            <td>7</td>
-            <td>5</td>
+            <td>10</td>
+            <td>6</td>
         </tr>
     </tbody>
 </table>
