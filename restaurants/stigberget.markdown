@@ -36,4 +36,4 @@ price: 245kr
     </tbody>
 </table>
 
-<img class="review-card__image" src="/images/branneriet.jpg" alt="Schnitzel with fries and a beer at Bränneriet" width="1080" height="1920" loading="lazy" decoding="async">
+vid stigbergets fot fanns det högre höjder att önska sig
